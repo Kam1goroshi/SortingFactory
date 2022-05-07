@@ -1,0 +1,77 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/main/java/Main.java
+rename from src/Main.java
+rename to src/main/java/Main.java
+--- a/src/Main.java	(revision fd333b182a5a622d798bdac4200f1882b7b54997)
++++ b/src/main/java/Main.java	(date 1651938793652)
+@@ -6,7 +6,6 @@
+  * Main method class
+  */
+ public class Main {
+-
+     /**
+      * Gets the choice of the user when selecting algorithm or sorting function
+      *
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+new file mode 100644
+--- /dev/null	(date 1651939126832)
++++ b/pom.xml	(date 1651939126832)
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++
++    <groupId>groupId</groupId>
++    <artifactId>CS241_HW_AH239059</artifactId>
++    <version>1.0-SNAPSHOT</version>
++
++    <properties>
++        <maven.compiler.source>17</maven.compiler.source>
++        <maven.compiler.target>17</maven.compiler.target>
++    </properties>
++    
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"JavadocGenerationManager\">\r\n    <option name=\"OUTPUT_DIRECTORY\" value=\"$PROJECT_DIR$/Javadocs\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_USE\" value=\"true\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_AUTHOR\" value=\"true\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_VERSION\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" project-jdk-name=\"liberica-18\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision fd333b182a5a622d798bdac4200f1882b7b54997)
++++ b/.idea/misc.xml	(date 1651938950316)
+@@ -6,7 +6,7 @@
+     <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
+     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="liberica-18" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
+diff --git a/src/SortingMachine.java b/src/main/java/SortingMachine.java
+rename from src/SortingMachine.java
+rename to src/main/java/SortingMachine.java
+diff --git a/src/SortingFunctionFactory.java b/src/main/java/SortingFunctionFactory.java
+rename from src/SortingFunctionFactory.java
+rename to src/main/java/SortingFunctionFactory.java
+diff --git a/src/licence.txt b/src/main/licence.txt
+rename from src/licence.txt
+rename to src/main/licence.txt
+diff --git a/src/SortingAlgorithmChoices.java b/src/main/java/SortingAlgorithmChoices.java
+rename from src/SortingAlgorithmChoices.java
+rename to src/main/java/SortingAlgorithmChoices.java
