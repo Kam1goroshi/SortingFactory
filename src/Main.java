@@ -1,10 +1,4 @@
-/**
- * @author Georgios Pappas
- * @version 1.0
- * @contact g.pappas.1@nup.ac.cy until 2025
- * @licence none
- *
- */
+
 import sorting_machine.SortingMachine;
 import sorting_machine.SortingOrderChoices;
 import sorting_machine.SortingAlgorithmChoices;
@@ -13,7 +7,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Follows the assignment's instructions and demonstrates sorting_machine
+ * Implements the assignment's input and output instructions and demonstrates sorting_machine
+ *
+ * @author Georgios Pappas
+ * @version 1.0
  */
 public class Main {
     /**

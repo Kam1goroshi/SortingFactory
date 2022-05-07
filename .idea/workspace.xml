@@ -4,64 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6362f9a7-46d3-4fcb-b5bd-305e99158173" name="Changes" comment="Improved javadocs">
-      <change afterPath="$PROJECT_DIR$/Javadocs/Main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/allclasses-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/allpackages-index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/element-list" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/help-doc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index-files/index-1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index-files/index-2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index-files/index-3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index-files/index-4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index-files/index-5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index-files/index-6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index-files/index-7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index-files/index-8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index-files/index-9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/jquery-ui.overrides.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/legal/ADDITIONAL_LICENSE_INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/legal/ASSEMBLY_EXCEPTION" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/legal/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/legal/jquery.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/legal/jqueryUI.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/member-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/module-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/overview-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/overview-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/package-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/resources/glass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/resources/x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_65_dadada_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_75_dadada_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_222222_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_2e83ff_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_454545_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_888888_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_cd0a0a_256x240.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/jquery-3.5.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/jquery-ui.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script-dir/jquery-ui.structure.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingAlgorithmChoices.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingFunctionFactory.SortingFunction.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingFunctionFactory.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingMachine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingOrderChoices.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/package-summary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/package-tree.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/stylesheet.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/tag-search-index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javadocs/type-search-index.js" afterDir="false" />
+    <list default="true" id="6362f9a7-46d3-4fcb-b5bd-305e99158173" name="Changes" comment="Generated better Javadocs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/Main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingAlgorithmChoices.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingAlgorithmChoices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingFunctionFactory.SortingFunction.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingFunctionFactory.SortingFunction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingFunctionFactory.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingFunctionFactory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingMachine.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingMachine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingOrderChoices.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/SortingOrderChoices.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/sorting_machine/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/sorting_machine/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/sorting_machine/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +143,7 @@
       <workItem from="1651872452615" duration="23899000" />
       <workItem from="1651901785692" duration="8016000" />
       <workItem from="1651937526836" duration="10326000" />
-      <workItem from="1651959864615" duration="3783000" />
+      <workItem from="1651959864615" duration="4884000" />
     </task>
     <task id="LOCAL-00001" summary="Update finished, will clean in main branch.">
       <created>1651903768369</created>
@@ -280,7 +250,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651963813472</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Deleted Javadocs">
+      <created>1651964192164</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1651964192164</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Generated better Javadocs">
+      <created>1651964250724</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1651964250724</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,6 +292,8 @@
     <MESSAGE value="changed javadocs to docs so I can make a github page :)" />
     <MESSAGE value="changed javadocs to docs so I can make a GitHub page :)" />
     <MESSAGE value="Improved javadocs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved javadocs" />
+    <MESSAGE value="Deleted Javadocs" />
+    <MESSAGE value="Generated better Javadocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generated better Javadocs" />
   </component>
 </project>
