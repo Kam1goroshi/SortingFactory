@@ -1,21 +1,14 @@
-/**
- * Copyright <2022> <Georgios Pappas>
- * <p>
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- * <p>
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- * <p>
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+
+
+package sorting_machine;
+
 import java.util.function.BiPredicate;
 
 /**
- * Generator of sorting functions
- * Use by instantiating and invoking the generate() method
- *
- * @param <T> the type of the items to be sorted, must implement comparable
+ * Defines and generates sorting functions
  */
 public class SortingFunctionFactory<T extends Comparable<T>> {
+
     /**
      * Generates a comparison function for the given order choice <br>
      *
@@ -56,8 +49,11 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
     }
 
     /**
-     * @param algorithmChoice chosen algorithm from enum, i.e. BUBBLE_SORT
-     * @param orderChoice     chosen order from enum, i.e. ASCENDING
+     * Generates a SortingFunction based on given choices
+     *
+     * @see SortingFunction
+     * @param algorithmChoice chosen algorithm
+     * @param orderChoice     chosen order
      * @return a sorting function
      */
     public SortingFunction<T> generate(SortingAlgorithmChoices algorithmChoice, SortingOrderChoices orderChoice) {
@@ -71,7 +67,9 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
 
 
     /**
-     * @param shouldSwap a function to decide if its' two arguments are in sorted order
+     * Generates a function that sorts the given array by mutating
+     *
+     * @param shouldSwap a function to decide if its two arguments are in sorted order
      * @return An out-function which sorts an array of type T using the bubble-sort algorithm <br>
      */
     private SortingFunction<T> generateBubbleSort(BiPredicate<T, T> shouldSwap) {
@@ -96,6 +94,8 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
     }
 
     /**
+     * Generates a function that sorts the given array by mutating
+     *
      * @param shouldSwap a function to decide if its' two arguments are in sorted order
      * @return An out-function which sorts an array of type T using the insertion-sort algorithm <br>
      */
@@ -121,6 +121,8 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
     }
 
     /**
+     * Generates a function that sorts the given array by mutating
+     *
      * @param shouldSwap a function to decide if its' two arguments are in sorted order
      * @return An out-function which sorts an array of type T using the selection-sort algorithm <br>
      */
@@ -142,6 +144,8 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
     }
 
     /**
+     * Generates a function that sorts the given array by mutating
+     *
      * @param shouldSwap a function to decide if its' two arguments are in sorted order
      * @return An out-function which sorts an array of type T using the quick-sort algorithm <br>
      */
@@ -174,7 +178,7 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
             }
 
             /**
-             * Sorts the given array
+             * Sorts the given array by mutating
              *
              * @param arr the array to be sorted
              * @param first the starting index to sort from, included
@@ -222,12 +226,14 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
 
     /**
      * Interface for a sorting function
+     *
      * @param <T> the type of items to be sorted
      */
     @FunctionalInterface
-    public interface SortingFunction<T>{
+    public interface SortingFunction<T> {
         /**
-         * Warning: mutates input
+         * Sorts a given array by mutating it
+         *
          * @param array to be sorted
          * @return the steps needed to complete
          */

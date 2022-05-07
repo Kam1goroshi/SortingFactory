@@ -4,8 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6362f9a7-46d3-4fcb-b5bd-305e99158173" name="Changes" comment="Removing .idea from gitignore">
-      <change beforePath="$PROJECT_DIR$/CS241_HW_AH239059.iml" beforeDir="false" />
+    <list default="true" id="6362f9a7-46d3-4fcb-b5bd-305e99158173" name="Changes" comment="Update in project structure and licence">
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/MIT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sorting_machine/SortingOrderChoices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sorting_machine/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/SortingMachine.SortingAlgorithmEnum.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/SortingMachine.SortingOrderEnum.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/SortingMachine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/allclasses-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/class-use/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/class-use/SortingMachine.SortingAlgorithmEnum.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/class-use/SortingMachine.SortingOrderEnum.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/class-use/SortingMachine.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/copy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/legal/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/legal/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/package-use.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_65_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_222222_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_454545_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_888888_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script-dir/jquery-ui.structure.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javadocs/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingAlgorithmChoices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting_machine/SortingAlgorithmChoices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingFunctionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting_machine/SortingFunctionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting_machine/SortingMachine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +87,7 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
@@ -51,7 +121,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "copyright.profiles"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -60,7 +130,7 @@
       <recent name="C:\Users\User\IdeaProjects\CS241_HW_AH239059\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CS241_HW_AH239059" />
@@ -95,9 +165,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.quicksortPractice" />
-        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -115,7 +185,7 @@
       <workItem from="1651821384306" duration="7055000" />
       <workItem from="1651872452615" duration="23899000" />
       <workItem from="1651901785692" duration="8016000" />
-      <workItem from="1651937526836" duration="2726000" />
+      <workItem from="1651937526836" duration="7709000" />
     </task>
     <task id="LOCAL-00001" summary="Update finished, will clean in main branch.">
       <created>1651903768369</created>
@@ -180,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651939953061</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="IntelliJ updates in .idea">
+      <created>1651940319791</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1651940319791</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +279,8 @@
     <MESSAGE value="Basic documentation added" />
     <MESSAGE value="Deleting logs" />
     <MESSAGE value="Removing .idea from gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removing .idea from gitignore" />
+    <MESSAGE value="IntelliJ updates in .idea" />
+    <MESSAGE value="Update in project structure and licence" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update in project structure and licence" />
   </component>
 </project>

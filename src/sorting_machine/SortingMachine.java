@@ -1,11 +1,7 @@
+package sorting_machine;
+
 /**
- * Copyright <2022> <Georgios Pappas>
- * <p>
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- * <p>
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- * <p>
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * Sorts inputs based on chosen settings
  */
 public class SortingMachine<T extends Comparable<T>> {
 
@@ -19,12 +15,13 @@ public class SortingMachine<T extends Comparable<T>> {
 
     /**
      * Initializes the attributes of the generated object and generates a sorting function through <br>
-     * with the use of {@link #sortingFunctionFactory}
+     * with the use of SortingFunctionFactory
      *
+     * @see SortingFunctionFactory
      * @param algorithmChoice which sorting algorithm to use
      * @param orderChoice in which order to sort
      */
-    SortingMachine(SortingAlgorithmChoices algorithmChoice, SortingOrderChoices orderChoice) {
+    public SortingMachine(SortingAlgorithmChoices algorithmChoice, SortingOrderChoices orderChoice) {
         this.algorithmChoice = algorithmChoice;
         this.orderChoice = orderChoice;
         this.sortingFunctionFactory = new SortingFunctionFactory<>();
@@ -39,14 +36,14 @@ public class SortingMachine<T extends Comparable<T>> {
     //#*#*#*#*#------\\   Getters and Setters   //------#*#*#*#*#
 
     /**
-     * @return the last chosen sorting order that has been set
+     * @return the last chosen sorting order setting
      */
     public SortingOrderChoices getOrderChoice() {
         return orderChoice;
     }
 
     /**
-     * @return the chosen algorithm that has last been set
+     * @return the chosen algorithm setting
      */
     public SortingAlgorithmChoices getAlgorithmChoice() {
         return algorithmChoice;
@@ -59,16 +56,24 @@ public class SortingMachine<T extends Comparable<T>> {
     @SuppressWarnings("unused")
     public void setOrderChoice(SortingOrderChoices orderChoice) {
         this.orderChoice = orderChoice;
-        sortingFunction = sortingFunctionFactory.generate(algorithmChoice, orderChoice);
+        updateSortingFunction();
     }
 
     /**
      * Sets the algorithm choice for sorting machine and updates the sorting function
+     *
      * @param algorithmChoice choice for which algorithm to use
      */
     @SuppressWarnings("unused")
     public void setAlgorithmChoice(SortingAlgorithmChoices algorithmChoice) {
         this.algorithmChoice = algorithmChoice;
+        updateSortingFunction();
+    }
+
+    /**
+     * Update this.sortingFunction based on algorithmChoice and orderChoice
+     */
+    private void updateSortingFunction(){
         sortingFunction = sortingFunctionFactory.generate(algorithmChoice, orderChoice);
     }
 }

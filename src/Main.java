@@ -1,10 +1,15 @@
+/**
+ * @author Georgios Pappas
+ * @version 1.0
+ * @contact g.pappas.1@nup.ac.cy until 2025
+ * @licence none
+ *
+ */
+import sorting_machine.*;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * Main method class
- */
 public class Main {
     /**
      * Gets the choice of the user when selecting algorithm or sorting function
