@@ -1,7 +1,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Purpose](#purpose)
-* [Use example](#how-to-use)
+* [Usage example](#how-to-use)
 
 ## General Info
 This project contains a Sorting library that uses dynamic creation of functions according to needs. This offers a balanced tradeoff between flexibility and performance when handling big arrays and need several algorithms or sorting orders.
@@ -11,7 +11,7 @@ This project contains a Sorting library that uses dynamic creation of functions 
 * Learning lambdas and callbacks in java
 * Homework of neapolis algorithms class
 
-## Use example
+## Usage example
 
 ```
 import sorting_machine.SortingMachine;
