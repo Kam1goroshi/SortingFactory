@@ -12,6 +12,9 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Follows the assignment's instructions and demonstrates sorting_machine
+ */
 public class Main {
     /**
      * Gets the choice of the user when selecting algorithm or sorting function
