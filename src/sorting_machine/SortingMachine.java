@@ -29,6 +29,13 @@ public class SortingMachine<T extends Comparable<T>> {
     }
 
     //#*#*#*#*#------\\   Functionality   //------#*#*#*#*#
+
+    /**
+     * sorts the given array by mutating it
+     *
+     * @param array containing items with the same type as class' generic type
+     * @return how many steps in loops and recursions were taken
+     */
     public long sort(T[] array){
         return sortingFunction.sort(array);
     }

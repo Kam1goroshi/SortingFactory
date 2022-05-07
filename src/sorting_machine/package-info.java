@@ -27,7 +27,5 @@
  * @author Georgios Pappas
  * @since 7/5/2022
  * @version 1.0
- * @licence MIT
- * @contact g.pappas.1@nup.ac.cy
  */
 package sorting_machine;

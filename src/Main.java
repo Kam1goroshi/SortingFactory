@@ -5,7 +5,9 @@
  * @licence none
  *
  */
-import sorting_machine.*;
+import sorting_machine.SortingMachine;
+import sorting_machine.SortingOrderChoices;
+import sorting_machine.SortingAlgorithmChoices;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
