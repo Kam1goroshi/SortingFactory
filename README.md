@@ -12,6 +12,7 @@ This project contains a Sorting library that uses dynamic creation of functions 
 * Homework of neapolis algorithms class
 
 ## Usage example
+With src/sorting_machine in your project:
 
 ```
 import sorting_machine.SortingMachine;
