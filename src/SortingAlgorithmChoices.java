@@ -1,6 +1,11 @@
-enum SortingAlgorithmChoices{
-    BUBBLE_SORT,
-    SELECTION_SORT,
+enum SortingAlgorithmChoices {
     INSERTION_SORT,
-    QUICK_SORT
+    BUBBLE_SORT,
+    QUICK_SORT,
+    SELECTION_SORT
+}
+
+enum SortingOrderChoices {
+    ASCENDING,
+    DESCENDING
 }

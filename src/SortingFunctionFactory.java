@@ -1,3 +1,12 @@
+/**
+ * Copyright <2022> <Georgios Pappas>
+ * <p>
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ * <p>
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ * <p>
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
 import java.util.function.BiPredicate;
 
 /**
@@ -9,8 +18,9 @@ import java.util.function.BiPredicate;
 public class SortingFunctionFactory<T extends Comparable<T>> {
     /**
      * Generates a comparison function for the given order choice <br>
+     *
      * @param sortingOrderChoice enum for sorting order, i.e. ASCENDING,
-     * @return (l,r)->{l>r} when ASCENDING, (l,r)->{l<r} when DESCENDING
+     * @return (l, r)->{l>r} when ASCENDING, (l,r)->{l<r} when DESCENDING
      */
     private BiPredicate<T, T> generateShouldSwap(SortingOrderChoices sortingOrderChoice) {
         return switch (sortingOrderChoice) {
@@ -21,8 +31,9 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
 
     /**
      * Generates a comparison function for the given order choice
+     *
      * @param sortingOrderChoice enum for sorting order, i.e. ASCENDING,
-     * @return (l,r)->{l>r} when DESCENDING, (l,r)->{l<r} when ASCENDING
+     * @return (l, r)->{l>r} when DESCENDING, (l,r)->{l<r} when ASCENDING
      */
     private BiPredicate<T, T> generateShouldNotSwap(SortingOrderChoices sortingOrderChoice) {
         return switch (sortingOrderChoice) {
@@ -33,9 +44,10 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
 
     /**
      * Swaps arr[l] with arr[r]
+     *
      * @param arr an array of T
-     * @param l left index
-     * @param r right index
+     * @param l   left index
+     * @param r   right index
      */
     private void swap(T[] arr, int l, int r) {
         T temp = arr[l];
@@ -45,7 +57,7 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
 
     /**
      * @param algorithmChoice chosen algorithm from enum, i.e. BUBBLE_SORT
-     * @param orderChoice chosen order from enum, i.e. ASCENDING
+     * @param orderChoice     chosen order from enum, i.e. ASCENDING
      * @return a sorting function
      */
     public SortingFunction<T> generate(SortingAlgorithmChoices algorithmChoice, SortingOrderChoices orderChoice) {
@@ -134,7 +146,19 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
      * @return An out-function which sorts an array of type T using the quick-sort algorithm <br>
      */
     private SortingFunction<T> generateQuickSort(BiPredicate<T, T> shouldSwap, BiPredicate<T, T> shouldNotSwap) {
-        class QuickSortCallback{
+        class QuickSortCallback {
+            /**
+             * Sorts the leftmost, middle, and rightmost elements in the sorting range, then returns the middle one <br>
+             * This is a good way to find the median, as it greatly increases the chance to keep the steps required <br>
+             * in c * nlogn time
+             *
+             * @param arr The array that is being sorted
+             * @param first The first index the current quicksort call works at
+             * @param last The last index the current quicksort call works at
+             * @param shouldSwap comparison function that decides when elements should be swapped. <br>
+             *                   Not really necessary, but it doesn't matter if it's used.
+             * @return the pivot index
+             */
             private int medianOfThree(T[] arr, int first, int last, BiPredicate<T, T> shouldSwap) {
                 int mid = (first + last) / 2;
                 if (last - first + 1 < 3)
@@ -149,8 +173,18 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
                 return mid;
             }
 
-            private long quickSortHelper(T[] arr, int first, int last, BiPredicate<T, T> shouldSwap,
-                                         BiPredicate<T, T> shouldNotSwap) {
+            /**
+             * Sorts the given array
+             *
+             * @param arr the array to be sorted
+             * @param first the starting index to sort from, included
+             * @param last the last index to sort until, included
+             * @param shouldSwap conditional function that decides if there should be a swap
+             * @param shouldNotSwap conditional function that decides if there should not be a swap
+             * @return how many steps of loops and recursions were required
+             */
+            private long quickSort(T[] arr, int first, int last, BiPredicate<T, T> shouldSwap,
+                                   BiPredicate<T, T> shouldNotSwap) {
                 if (last <= first)
                     return 1;
                 long steps = 1;
@@ -160,25 +194,43 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
                 swap(arr, pivot, last);
 
                 while (l < r) {
+                    steps++;
                     while (l < last && !shouldSwap.test(arr[l], arr[last])) { //on equal included
                         l++;
-                        System.out.println(l);
+                        steps++;
                     }
                     while (r >= first && shouldNotSwap.test(arr[last], arr[r])) { //on equal excluded
                         r--;
+                        steps++;
                     }
                     if (l < r)
                         swap(arr, l, r);
                 }
-                swap(arr, l, last);
+                if (shouldSwap.test(arr[l], arr[last]))
+                    swap(arr, l, last);
+
                 return steps
-                        + quickSortHelper(arr, first, l - 1, shouldSwap, shouldNotSwap)
-                        + quickSortHelper(arr, l + 1, last, shouldSwap, shouldNotSwap);
+                        + quickSort(arr, first, l - 1, shouldSwap, shouldNotSwap)
+                        + quickSort(arr, l + 1, last, shouldSwap, shouldNotSwap);
             }
         }
 
         QuickSortCallback quickSortCallback = new QuickSortCallback();
         //return sorting function
-        return (arr) -> quickSortCallback.quickSortHelper(arr, 0, arr.length - 1, shouldSwap, shouldNotSwap);
+        return (arr) -> quickSortCallback.quickSort(arr, 0, arr.length - 1, shouldSwap, shouldNotSwap);
+    }
+
+    /**
+     * Interface for a sorting function
+     * @param <T> the type of items to be sorted
+     */
+    @FunctionalInterface
+    public interface SortingFunction<T>{
+        /**
+         * Warning: mutates input
+         * @param array to be sorted
+         * @return the steps needed to complete
+         */
+        long sort(T[] array);
     }
 }
