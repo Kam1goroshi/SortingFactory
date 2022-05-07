@@ -1,26 +1,53 @@
 import java.util.function.BiPredicate;
 
+/**
+ * Generator of sorting functions
+ * Use by instantiating and invoking the generate() method
+ *
+ * @param <T> the type of the items to be sorted, must implement comparable
+ */
 public class SortingFunctionFactory<T extends Comparable<T>> {
-    private BiPredicate<T, T> generateShouldSwap(SortingOrderChoices sortingOrderChoices) {
-        return switch (sortingOrderChoices) {
+    /**
+     * Generates a comparison function for the given order choice <br>
+     * @param sortingOrderChoice enum for sorting order, i.e. ASCENDING,
+     * @return (l,r)->{l>r} when ASCENDING, (l,r)->{l<r} when DESCENDING
+     */
+    private BiPredicate<T, T> generateShouldSwap(SortingOrderChoices sortingOrderChoice) {
+        return switch (sortingOrderChoice) {
             case ASCENDING -> ((l, r) -> l.compareTo(r) > 0);
             case DESCENDING -> ((l, r) -> l.compareTo(r) < 0);
         };
     }
 
-    private BiPredicate<T, T> generateShouldNotSwap(SortingOrderChoices sortingOrderChoices) {
-        return switch (sortingOrderChoices) {
+    /**
+     * Generates a comparison function for the given order choice
+     * @param sortingOrderChoice enum for sorting order, i.e. ASCENDING,
+     * @return (l,r)->{l>r} when DESCENDING, (l,r)->{l<r} when ASCENDING
+     */
+    private BiPredicate<T, T> generateShouldNotSwap(SortingOrderChoices sortingOrderChoice) {
+        return switch (sortingOrderChoice) {
             case ASCENDING -> ((l, r) -> l.compareTo(r) < 0);
             case DESCENDING -> ((l, r) -> l.compareTo(r) > 0);
         };
     }
 
+    /**
+     * Swaps arr[l] with arr[r]
+     * @param arr an array of T
+     * @param l left index
+     * @param r right index
+     */
     private void swap(T[] arr, int l, int r) {
         T temp = arr[l];
         arr[l] = arr[r];
         arr[r] = temp;
     }
 
+    /**
+     * @param algorithmChoice chosen algorithm from enum, i.e. BUBBLE_SORT
+     * @param orderChoice chosen order from enum, i.e. ASCENDING
+     * @return a sorting function
+     */
     public SortingFunction<T> generate(SortingAlgorithmChoices algorithmChoice, SortingOrderChoices orderChoice) {
         return switch (algorithmChoice) {
             case BUBBLE_SORT -> generateBubbleSort(generateShouldSwap(orderChoice));
@@ -30,6 +57,11 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
         };
     }
 
+
+    /**
+     * @param shouldSwap a function to decide if its' two arguments are in sorted order
+     * @return An out-function which sorts an array of type T using the bubble-sort algorithm <br>
+     */
     private SortingFunction<T> generateBubbleSort(BiPredicate<T, T> shouldSwap) {
         //Implement and return sorting function
         return (arr) -> {
@@ -51,6 +83,10 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
         };
     }
 
+    /**
+     * @param shouldSwap a function to decide if its' two arguments are in sorted order
+     * @return An out-function which sorts an array of type T using the insertion-sort algorithm <br>
+     */
     private SortingFunction<T> generateInsertionSort(BiPredicate<T, T> shouldSwap) {
         //Implement and return sorting function
         return (arr) -> {
@@ -72,6 +108,10 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
         };
     }
 
+    /**
+     * @param shouldSwap a function to decide if its' two arguments are in sorted order
+     * @return An out-function which sorts an array of type T using the selection-sort algorithm <br>
+     */
     private SortingFunction<T> generateSelectionSort(BiPredicate<T, T> shouldSwap) {
         //Implement and return sorting function
         return (arr) -> {
@@ -89,13 +129,10 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
         };
     }
 
-
-    @FunctionalInterface
-    interface MedianOfThreeCallback<T extends Comparable<T>> {
-        int sort(T[] arr, int first, int last);
-    }
-
-
+    /**
+     * @param shouldSwap a function to decide if its' two arguments are in sorted order
+     * @return An out-function which sorts an array of type T using the quick-sort algorithm <br>
+     */
     private SortingFunction<T> generateQuickSort(BiPredicate<T, T> shouldSwap, BiPredicate<T, T> shouldNotSwap) {
         class QuickSortCallback{
             private int medianOfThree(T[] arr, int first, int last, BiPredicate<T, T> shouldSwap) {
