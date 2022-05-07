@@ -1,0 +1,4 @@
+enum SortingOrderChoices {
+    ASCENDING,
+    DESCENDING
+}
