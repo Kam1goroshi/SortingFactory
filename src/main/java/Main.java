@@ -1,13 +1,3 @@
-/**
- * Copyright <2022> <Georgios Pappas>
- * <p>
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
- * <p>
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- * <p>
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -16,7 +6,6 @@ import java.util.Scanner;
  * Main method class
  */
 public class Main {
-
     /**
      * Gets the choice of the user when selecting algorithm or sorting function
      *
@@ -53,9 +42,10 @@ public class Main {
     public static void main(String[] args) {
         //Setup a pseudo-random number generator, and use it to fill numbers array with ints in [0,1000)
         Random rng = new Random();
-        Integer[] numbers = new Integer[1000];
-        for (int i = 0; i < 1000; i++) {
-            numbers[i] = rng.nextInt(1000);
+        int n = 1000;
+        Integer[] numbers = new Integer[n];
+        for (int i = 0; i < n; i++) {
+            numbers[i] = rng.nextInt(n);
         }
 
         //Print the numbers
@@ -70,7 +60,7 @@ public class Main {
                 + " selection-sort[" + SortingAlgorithmChoices.SELECTION_SORT.ordinal() + "]");
 
         //Get input and make a soft check for correctness
-        //The program will shut down upon exception, but will prompt for another input if out of bounds
+        //The program will shut down upon exception, but will prompt for another input if out of choices bounds
         Scanner scanner = new Scanner(System.in);
         int maxInput = SortingAlgorithmChoices.values().length - 1;
         int input = getInput(maxInput, scanner);
@@ -90,14 +80,26 @@ public class Main {
         //Setup sorting machine
         SortingMachine<Integer> sortingMachine = new SortingMachine<>(sortingAlgorithmChoice, sortingOrderChoicesChoice);
         //Sort the numbers
-        sortingMachine.sort(numbers);
+        long steps = sortingMachine.sort(numbers);
 
         System.out.println("After sort:");
         System.out.println(Arrays.toString(numbers));
 
-//        System.out.println("\nAlgorithm: " + sortingMachine.getLastAlgoName());
-//        System.out.println("Order: " + sortingMachine.getLastSortingOrder());
-//        System.out.println("Steps: " + sortingMachine.getLastSortSteps());
+        String algorithmUsed = switch (sortingMachine.getAlgorithmChoice()){
+            case BUBBLE_SORT -> "bubble-sort";
+            case SELECTION_SORT -> "selection-sort";
+            case INSERTION_SORT -> "insertion-sort";
+            case QUICK_SORT -> "quick-sort";
+        };
+
+        String orderUsed = switch (sortingMachine.getOrderChoice()){
+            case ASCENDING -> "ascending";
+            case DESCENDING -> "descending";
+        };
+
+        System.out.println("\nAlgorithm: " + algorithmUsed);
+        System.out.println("Order: " + orderUsed);
+        System.out.println("Steps: " + steps);
         scanner.close();
     }
 }
