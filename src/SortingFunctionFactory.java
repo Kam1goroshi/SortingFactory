@@ -97,58 +97,51 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
 
 
     private SortingFunction<T> generateQuickSort(BiPredicate<T, T> shouldSwap, BiPredicate<T, T> shouldNotSwap) {
-        //return sorting function
-        return (arr) -> quickSortHelper(arr, 0, arr.length - 1, shouldSwap, shouldNotSwap);
-    }
+        class QuickSortCallback{
+            private int medianOfThree(T[] arr, int first, int last, BiPredicate<T, T> shouldSwap) {
+                int mid = (first + last) / 2;
+                if (last - first + 1 < 3)
+                    return mid;
+                if (shouldSwap.test(arr[first], arr[mid]))
+                    swap(arr, first, mid);
+                if (shouldSwap.test(arr[mid], arr[last]))
+                    swap(arr, mid, last);
+                if (shouldSwap.test(arr[first], arr[mid]))
+                    swap(arr, first, mid);
 
-    /**
-     * A method to select the quicksort pivot <br>
-     * Greatly increases the chances of having a cost whose graph behaves like nlogn
-     *
-     * @param arr        array to be sorted
-     * @param first      the first element to be sorted
-     * @param last       the last element to be sorted
-     * @param shouldSwap
-     * @return the index of the ideal pivot
-     */
-    private int medianOfThree(T[] arr, int first, int last, BiPredicate<T, T> shouldSwap) {
-        int mid = (first + last) / 2;
-        if (last - first + 1 < 3)
-            return mid;
-        if (shouldSwap.test(arr[first], arr[mid]))
-            swap(arr, first, mid);
-        if (shouldSwap.test(arr[mid], arr[last]))
-            swap(arr, mid, last);
-        if (shouldSwap.test(arr[first], arr[mid]))
-            swap(arr, first, mid);
-
-        return mid;
-    }
-
-    private long quickSortHelper(T[] arr, int first, int last, BiPredicate<T, T> shouldSwap,
-                                 BiPredicate<T, T> shouldNotSwap) {
-        if (last <= first)
-            return 1;
-        long steps = 1;
-        int l = first, r = last - 1;
-        //Find the pivot using the median of 3 method, and push it at the end
-        int pivot = medianOfThree(arr, first, last, shouldNotSwap);
-        swap(arr, pivot, last);
-
-        while (l < r) {
-            while (l < last && !shouldSwap.test(arr[l], arr[last])) { //on equal included
-                l++;
-                System.out.println(l);
+                return mid;
             }
-            while (r >= first && shouldNotSwap.test(arr[last], arr[r])) { //on equal excluded
-                r--;
+
+            private long quickSortHelper(T[] arr, int first, int last, BiPredicate<T, T> shouldSwap,
+                                         BiPredicate<T, T> shouldNotSwap) {
+                if (last <= first)
+                    return 1;
+                long steps = 1;
+                int l = first, r = last - 1;
+                //Find the pivot using the median of 3 method, and push it at the end
+                int pivot = medianOfThree(arr, first, last, shouldNotSwap);
+                swap(arr, pivot, last);
+
+                while (l < r) {
+                    while (l < last && !shouldSwap.test(arr[l], arr[last])) { //on equal included
+                        l++;
+                        System.out.println(l);
+                    }
+                    while (r >= first && shouldNotSwap.test(arr[last], arr[r])) { //on equal excluded
+                        r--;
+                    }
+                    if (l < r)
+                        swap(arr, l, r);
+                }
+                swap(arr, l, last);
+                return steps
+                        + quickSortHelper(arr, first, l - 1, shouldSwap, shouldNotSwap)
+                        + quickSortHelper(arr, l + 1, last, shouldSwap, shouldNotSwap);
             }
-            if (l < r)
-                swap(arr, l, r);
         }
-        swap(arr, l, last);
-        return steps
-                + quickSortHelper(arr, first, l - 1, shouldSwap, shouldNotSwap)
-                + quickSortHelper(arr, l + 1, last, shouldSwap, shouldNotSwap);
+
+        QuickSortCallback quickSortCallback = new QuickSortCallback();
+        //return sorting function
+        return (arr) -> quickSortCallback.quickSortHelper(arr, 0, arr.length - 1, shouldSwap, shouldNotSwap);
     }
 }
