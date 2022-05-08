@@ -5,7 +5,7 @@
 * [Documentation](https://kam1goroshi.github.io/SortingFactory/)
 
 ## General Info
-This project contains a Sorting library that uses dynamic creation of functions according to needs. This offers a balanced tradeoff between flexibility and performance when handling big arrays and need several algorithms or sorting orders. This is because many branches are avoided.
+This project contains a Sorting library that uses dynamic creation of functions according to needs. The use of callbacks avoids a lot of branches, which in turn offers a balanced tradeoff between flexibility and performance when handling big arrays and need several algorithms or sorting orders.
 
 ## Purpose
 * Creating a useful library
