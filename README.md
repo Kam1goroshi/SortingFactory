@@ -2,7 +2,7 @@
 * [General info](#general-info)
 * [Purpose](#purpose)
 * [Usage example](#how-to-use)
-* [Documentation](#https://kam1goroshi.github.io/SortingFactory/)
+* [Documentation](#documentation)
 
 ## General Info
 This project contains a Sorting library that uses dynamic creation of functions according to needs. This offers a balanced tradeoff between flexibility and performance when handling big arrays and need several algorithms or sorting orders.
@@ -27,4 +27,4 @@ public class Example{
 ```
 
 ## Documentation
-https://kam1goroshi.github.io/SortingFactory/
+<href = "https://kam1goroshi.github.io/SortingFactory/"> JavaDocs </href>
