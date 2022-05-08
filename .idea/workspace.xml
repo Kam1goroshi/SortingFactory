@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Project Files" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6362f9a7-46d3-4fcb-b5bd-305e99158173" name="Changes" comment="Generated better Javadocs">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javadocs/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/Main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javadocs/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadocs/allclasses-index.html" afterDir="false" />
@@ -144,6 +150,8 @@
       <workItem from="1651901785692" duration="8016000" />
       <workItem from="1651937526836" duration="10326000" />
       <workItem from="1651959864615" duration="4884000" />
+      <workItem from="1651966229365" duration="8237000" />
+      <workItem from="1652004701370" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="Update finished, will clean in main branch.">
       <created>1651903768369</created>
@@ -264,7 +272,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651964250724</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Generated better Javadocs">
+      <created>1651966405505</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1651966405505</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

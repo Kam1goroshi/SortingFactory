@@ -67,7 +67,7 @@ public class Main {
                 + " selection-sort[" + SortingAlgorithmChoices.SELECTION_SORT.ordinal() + "]");
 
         //Get input and make a soft check for correctness
-        //The program will shut down upon exception, but will prompt for another input if out of choices bounds
+        //The program will shut down upon exception, prompt for another input if not in expected range
         Scanner scanner = new Scanner(System.in);
         int maxInput = SortingAlgorithmChoices.values().length - 1;
         int input = getInput(maxInput, scanner);
