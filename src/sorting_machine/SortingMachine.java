@@ -2,6 +2,9 @@ package sorting_machine;
 
 /**
  * Sorts inputs based on chosen settings
+ * @author Georgios Pappas
+ * @since 7/5/2022
+ * @version 1.0
  */
 public class SortingMachine<T extends Comparable<T>> {
 

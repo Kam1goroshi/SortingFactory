@@ -1,11 +1,13 @@
 
 
 package sorting_machine;
-
 import java.util.function.BiPredicate;
 
 /**
  * Defines and generates sorting functions
+ * @author Georgios Pappas
+ * @since 7/5/2022
+ * @version 1.0
  */
 public class SortingFunctionFactory<T extends Comparable<T>> {
 
@@ -51,10 +53,10 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
     /**
      * Generates a SortingFunction based on given choices
      *
-     * @see SortingFunction
      * @param algorithmChoice chosen algorithm
      * @param orderChoice     chosen order
      * @return a sorting function
+     * @see SortingFunction
      */
     public SortingFunction<T> generate(SortingAlgorithmChoices algorithmChoice, SortingOrderChoices orderChoice) {
         return switch (algorithmChoice) {
@@ -225,9 +227,9 @@ public class SortingFunctionFactory<T extends Comparable<T>> {
     }
 
     /**
-     * Interface for a sorting function
+     * Interface for a sorting function from the Comparison model
      *
-     * @param <T> the type of items to be sorted
+     * @param <T> the type of items to be sorted extends Comparable
      */
     @FunctionalInterface
     public interface SortingFunction<T> {
